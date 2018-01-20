@@ -1,14 +1,14 @@
-import React from 'react'
-import {Grid, Cell, TextField, Button} from 'react-md'
+import React from 'react';
+import { Grid, Cell, TextField, Button } from 'react-md';
 
-export class Login extends React.Component {
-
-  onClickLogin() {
-    // Dummy Implements
-    console.log('LoginTest')
+export default class Login extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
   }
 
   render() {
+    console.log(this.state.date);
     return (
       <Grid className="login">
         <Cell size={4} desktopOffset={4} tabletOffset={2}>
@@ -27,7 +27,7 @@ export class Login extends React.Component {
         </Cell>
         <Cell size={4} desktopOffset={4} tabletOffset={2}>
           <div className="md-text-center">
-            <Button raised primary onClick={() => this.onClickLogin()}>
+            <Button raised primary>
               Login
             </Button>
           </div>

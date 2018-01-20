@@ -11,12 +11,11 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "modules": true,
       "jsx": true
     }
   },
   "extends": ["eslint:recommended", "plugin:react/recommended",
-    "plugin:flowtype/recommended"],
+    "plugin:flowtype/recommended", "airbnb"],
   "plugins": ["flowtype", "react", "class-property"],
   "settings": {
     "flowtype": {

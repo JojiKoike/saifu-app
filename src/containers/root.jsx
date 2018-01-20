@@ -1,10 +1,15 @@
-import React from 'react'
-import {TabsContainer, Tabs, Tab} from 'react-md'
-import ExpenseContainer from './expense.js'
+import React from 'react';
+import { TabsContainer, Tabs, Tab } from 'react-md';
+import ExpenseContainer from './expense';
 
-export class RootContainer extends React.Component {
+export default class RootContainer extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { date: new Date() };
+  }
 
   render() {
+    console.log(this.state.date);
     return (
       <TabsContainer colored>
         <Tabs tabId="simple-tab">
@@ -28,6 +33,6 @@ export class RootContainer extends React.Component {
           </Tab>
         </Tabs>
       </TabsContainer>
-    )
+    );
   }
 }
