@@ -1,0 +1,32 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true,
+    "jest": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "modules": true,
+      "jsx": true
+    }
+  },
+  "extends": ["eslint:recommended", "plugin:react/recommended",
+    "plugin:flowtype/recommended"],
+  "plugins": ["flowtype", "react", "class-property"],
+  "settings": {
+    "flowtype": {
+      "onlyFilesWithFlowAnnotation": true
+    }
+  },
+  "rules": {
+    "no-console": "off",
+    "no-dupulicate-imports": 0,
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1
+  }
+}
