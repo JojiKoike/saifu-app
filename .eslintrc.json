@@ -11,12 +11,11 @@
     "sourceType": "module",
     "ecmaFeatures": {
       "experimentalObjectRestSpread": true,
-      "modules": true,
       "jsx": true
     }
   },
   "extends": ["eslint:recommended", "plugin:react/recommended",
-    "plugin:flowtype/recommended"],
+    "plugin:flowtype/recommended", "airbnb"],
   "plugins": ["flowtype", "react", "class-property"],
   "settings": {
     "flowtype": {
@@ -25,6 +24,7 @@
   },
   "rules": {
     "no-console": "off",
+    "react/forbid-prop-types": 0,
     "no-dupulicate-imports": 0,
     "flowtype/define-flow-type": 1,
     "flowtype/use-flow-type": 1
