@@ -32,11 +32,17 @@ class RootContainer extends Component {
             <Tab label="Home" />
             <Tab label="収入" />
             <Tab label="支出" />
+            <Tab label="資産" />
+            <Tab label="負債" />
+            <Tab label="移動" />
           </Tabs>
         </AppBar>
         { index === 0 && <p>Home</p>}
         { index === 1 && <p>収入</p>}
         { index === 2 && <ExpenseContainer />}
+        { index === 3 && <p>資産</p>}
+        { index === 4 && <p>負債</p>}
+        { index === 5 && <p>移動</p>}
       </div>
     );
   }
