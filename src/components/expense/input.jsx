@@ -1,5 +1,5 @@
 import React from 'react';
-import { DatePicker } from 'react-md';
+import TextField from 'material-ui/TextField';
 
 export default class ExpenseInput extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ export default class ExpenseInput extends React.Component {
   render() {
     console.log(this.state.date);
     return (
-      <DatePicker id="expense-date" label="支出日を選択" displayMode="portrait" />
+      <TextField type="date" />
     );
   }
 }

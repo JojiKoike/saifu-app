@@ -1,38 +1,48 @@
-import React from 'react';
-import { TabsContainer, Tabs, Tab } from 'react-md';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Tabs, { Tab } from 'material-ui/Tabs';
+import { withStyles } from 'material-ui/styles';
+import AppBar from 'material-ui/AppBar';
 import ExpenseContainer from './expense';
 
-export default class RootContainer extends React.Component {
+const styles = theme => ({
+  root: {
+    flexGrow: 1,
+    backgroundColor: theme.palette.background.paper,
+  },
+});
+
+class RootContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = { date: new Date() };
+    this.state = { index: 0 };
+  }
+
+  handleTabChange = (event, value) => {
+    this.setState({ index: value });
   }
 
   render() {
-    console.log(this.state.date);
+    const { classes } = this.props;
+    const { index } = this.state;
     return (
-      <TabsContainer colored>
-        <Tabs tabId="simple-tab">
-          <Tab label="Home">
-            <h3>Home</h3>
-          </Tab>
-          <Tab label="収入">
-            <h3>収入</h3>
-          </Tab>
-          <Tab label="支出">
-            <ExpenseContainer />
-          </Tab>
-          <Tab label="資産">
-            <h3>資産</h3>
-          </Tab>
-          <Tab label="負債">
-            <h3>負債</h3>
-          </Tab>
-          <Tab label="移動">
-            <h3>移動</h3>
-          </Tab>
-        </Tabs>
-      </TabsContainer>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Tabs value={index} onChange={this.handleTabChange}>
+            <Tab label="Home" />
+            <Tab label="収入" />
+            <Tab label="支出" />
+          </Tabs>
+        </AppBar>
+        { index === 0 && <p>Home</p>}
+        { index === 1 && <p>収入</p>}
+        { index === 2 && <ExpenseContainer />}
+      </div>
     );
   }
 }
+RootContainer.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(RootContainer);

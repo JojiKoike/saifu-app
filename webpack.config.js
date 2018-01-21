@@ -53,9 +53,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        exclude: /node_modules/,
         loader: 'style-loader!css-loader!sass-loader',
-        include: path.join(__dirname, 'src', 'styles'),
       },
       {
         test: /\.png$/,
@@ -63,7 +61,7 @@ module.exports = {
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
-        loader: 'url-loader',
+        loader: 'file?name=public/fonts/Roboto/[name].[ext]',
       },
     ],
   },

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ExpenseInput from '../components/expense/input';
 
-export default class ExpenseContainer extends React.Component {
+export default class ExpenseContainer extends Component {
   constructor(props) {
     super(props);
     this.state = { date: new Date() };
@@ -10,7 +10,9 @@ export default class ExpenseContainer extends React.Component {
   render() {
     console.log(this.state.date);
     return (
-      <ExpenseInput />
+      <div>
+        <ExpenseInput />
+      </div>
     );
   }
 }

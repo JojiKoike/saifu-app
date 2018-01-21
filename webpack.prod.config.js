@@ -60,7 +60,6 @@ module.exports = {
       {
         test: /\.scss?$/,
         loader: 'style-loader!css-loader!sass-loader',
-        include: path.join(__dirname, 'src', 'styles'),
       },
       {
         test: /\.png$/,
