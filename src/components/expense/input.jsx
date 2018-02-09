@@ -9,7 +9,12 @@ export default class ExpenseInput extends React.Component {
   render() {
     console.log(this.state.date);
     return (
-      <TextField type="date" />
+      <form>
+        <label htmlFor="expenseDate" >
+          支払日：
+          <TextField id="expenseDate" type="date" />
+        </label>
+      </form>
     );
   }
 }

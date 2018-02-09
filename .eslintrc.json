@@ -14,8 +14,7 @@
       "jsx": true
     }
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended",
-    "plugin:flowtype/recommended", "airbnb"],
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
   "plugins": ["flowtype", "react", "class-property"],
   "settings": {
     "flowtype": {
