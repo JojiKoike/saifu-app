@@ -1,14 +1,15 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import RootContainer from './containers/root';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import RootContainer from './containers/root';
 
-// import './styles/styles.scss';
+import './styles/styles.scss';
 
-// ReactDOM.render(
-//  <RootContainer />,
-//  document.getElementById('main'),
-// );
+ReactDOM.render(
+  <RootContainer />,
+  document.getElementById('main'),
+);
 
+/*
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
@@ -24,3 +25,4 @@ render(
   </Provider>,
   document.getElementById('main'),
 );
+*/
